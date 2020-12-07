@@ -39,7 +39,7 @@ class CalendarsController < ApplicationController
         wday_num = wday_num - 7
       end
 
-      days = { :month => (@todays_date + x).month, :date => (@todays_date+x).day, :plans => today_plans, :wday => wdays[(Date.today + x).wday] }
+      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans, wday: wdays[(Date.today + x).wday] }
       @week_days.push(days)
 
       #今日が日曜日であればDate.today.wdayの値は0、今日が月曜日であればDate.today.wdayの値は1です。このように、日曜を0とし、そこから土曜まで6までの数字を戻り値とします。
